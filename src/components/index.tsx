@@ -2,4 +2,4 @@
 export { Text } from './general/Text';
 
 // Specific
-export { WelcomeMsg } from './specific/WelcomeMsg';
+export { WelcomeMsg } from './specific/welcome/WelcomeMsg';

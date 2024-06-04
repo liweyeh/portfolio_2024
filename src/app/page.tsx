@@ -2,12 +2,12 @@ import { WelcomeMsg } from '@components';
 
 const Home = () => {
 	return (
-		<main className="bg-bg_primary h-screen">
+		<main className="bg-bg_primary">
 			<WelcomeMsg />
-			<div>about</div>
-			<div>skill list</div>
-			<div>projects</div>
-			<div>contact</div>
+			<div className="bg-txt_primary">about</div>
+			<div className="bg-txt_primary">skill list</div>
+			<div className="bg-txt_primary">projects</div>
+			<div className="bg-txt_primary">contact</div>
 		</main>
 	);
 };
