@@ -21,6 +21,15 @@ const config: Config = {
 				highlight: CUSTOM_COLORS.orange,
 				txt_primary: CUSTOM_COLORS.platinum,
 			},
+			keyframes: {
+				slide_right: {
+					'0%': { transform: 'translateX(-50%)' },
+					'100%': { transform: 'translateX(0%)' },
+				},
+			},
+			animation: {
+				slide_right: 'slide_right 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
+			},
 		},
 	},
 	plugins: [],

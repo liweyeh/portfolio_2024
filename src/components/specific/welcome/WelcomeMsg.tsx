@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
+import { useIntersectionObserver } from '@hooks';
 
 // Todo: draw simple monitor in css
 // Todo: add animation of monitor turning on
@@ -6,9 +8,14 @@ import React from 'react';
 // Todo: add scroll UI to indicate scrolling
 
 export const WelcomeMsg = () => {
+	const elementRef = useRef<HTMLDivElement | null>(null);
+	const { isInView } = useIntersectionObserver(elementRef);
+
 	return (
-		<div className="h-screen flex justify-center items-center">
-			<div className="h-[90vh] w-[90vw] flex flex-col items-center justify-center">
+		<div ref={elementRef} className="h-screen flex justify-center items-center">
+			<div
+				className={`h-[90vh] w-[90vw] flex flex-col items-center justify-center ${isInView && 'animate-slide_right'}`}
+			>
 				<div className="h-[85%] w-[100%] border-solid border-2 border-txt_primary rounded-2xl flex flex-col">
 					<div className="h-[90%]" />
 					<div className="h-[10%] border-t-2 border-txt_primary flex justify-center items-center">
