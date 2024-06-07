@@ -18,7 +18,7 @@ const config: Config = {
 		extend: {
 			colors: {
 				bg_primary: CUSTOM_COLORS.black,
-				highlight: CUSTOM_COLORS.orange,
+				highlight: CUSTOM_COLORS.oxford_blue,
 				txt_primary: CUSTOM_COLORS.platinum,
 			},
 			keyframes: {
@@ -26,9 +26,19 @@ const config: Config = {
 					'0%': { transform: 'translateX(-50%)' },
 					'100%': { transform: 'translateX(0%)' },
 				},
+				slide_left: {
+					'0%': { transform: 'translateX(50%)' },
+					'100%': { transform: 'translateX(0%)' },
+				},
+				fade_in: {
+					'0%': { opacity: '0%' },
+					'100%': { opacity: '100%' },
+				},
 			},
 			animation: {
 				slide_right: 'slide_right 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
+				slide_left: 'slide_left 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
+				fade_in: 'fade_in 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both',
 			},
 		},
 	},

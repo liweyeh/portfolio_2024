@@ -13,17 +13,27 @@ export const WelcomeMsg = () => {
 
 	return (
 		<div ref={elementRef} className="h-screen flex justify-center items-center">
-			<div
-				className={`h-[90vh] w-[90vw] flex flex-col items-center justify-center ${isInView && 'animate-slide_right'}`}
-			>
-				<div className="h-[85%] w-[100%] border-solid border-2 border-txt_primary rounded-2xl flex flex-col">
-					<div className="h-[90%]" />
-					<div className="h-[10%] border-t-2 border-txt_primary flex justify-center items-center">
-						<div className="h-10 w-10 border-2 border-txt_primary rounded-full" />
+			<div className={`h-[90vh] w-[90vw] flex flex-col items-center justify-center`}>
+				<div className={`h-[85%] w-[100%] flex flex-col`}>
+					<div
+						className={`h-[90%] border-solid border-x-2 border-t-2 border-txt_primary rounded-t-2xl flex items-center justify-center ${isInView && 'animate-slide_right'}`}
+					>
+						<p className={`text-txt_primary`}>{`Welcome to Liwei\'s portfolio`}</p>
+					</div>
+					<div
+						className={`h-[10%] border-2 border-txt_primary rounded-b-2xl flex justify-center items-center ${isInView && 'animate-slide_left'}`}
+					>
+						<div
+							className={`h-10 w-10 border-2 border-txt_primary rounded-full  ${isInView && 'animate-fade_in'}`}
+						/>
 					</div>
 				</div>
-				<div className="h-[4%] w-[10%] border-solid border-x-2 border-txt_primary" />
-				<div className="h-[2%] w-[40%] border-solid border-2 border-txt_primary rounded-md flex justify-center" />
+				<div
+					className={`h-[4%] w-[10%] border-solid border-x-2 border-txt_primary ${isInView && 'animate-slide_right'}`}
+				/>
+				<div
+					className={`h-[2%] w-[40%] border-solid border-2 border-txt_primary rounded-md flex justify-center ${isInView && 'animate-slide_left'}`}
+				/>
 			</div>
 		</div>
 	);
