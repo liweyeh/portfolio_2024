@@ -20,7 +20,7 @@ export const WelcomeMsg = () => {
 					>
 						<div>
 							<p
-								className={`text-txt_primary text-7xl  overflow-hidden border-r-2 whitespace-nowrap px-1 ${isInView && 'animate-typing'}`}
+								className={`text-txt_primary text-7xl overflow-hidden border-r-2 whitespace-nowrap mx-auto ${isInView && 'animate-typing'}`}
 							>{`Welcome to Liwei\'s portfolio`}</p>
 						</div>
 					</div>
