@@ -12,13 +12,17 @@ export const WelcomeMsg = () => {
 	const { isInView } = useIntersectionObserver(elementRef);
 
 	return (
-		<div ref={elementRef} className="h-screen flex justify-center items-center">
+		<div ref={elementRef} className="h-screen flex justify-center items-center overflow-hidden">
 			<div className={`h-[90vh] w-[90vw] flex flex-col items-center justify-center`}>
 				<div className={`h-[85%] w-[100%] flex flex-col`}>
 					<div
 						className={`h-[90%] border-solid border-x-2 border-t-2 border-txt_primary rounded-t-2xl flex items-center justify-center ${isInView && 'animate-slide_right'}`}
 					>
-						<p className={`text-txt_primary`}>{`Welcome to Liwei\'s portfolio`}</p>
+						<div>
+							<p
+								className={`text-txt_primary text-7xl  overflow-hidden border-r-2 whitespace-nowrap px-1 ${isInView && 'animate-typing'}`}
+							>{`Welcome to Liwei\'s portfolio`}</p>
+						</div>
 					</div>
 					<div
 						className={`h-[10%] border-2 border-txt_primary rounded-b-2xl flex justify-center items-center ${isInView && 'animate-slide_left'}`}
