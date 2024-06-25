@@ -5,3 +5,4 @@ export { ProgressBar, useProgress } from './general/ProgressBar';
 // Specific
 export { HomePage } from './specific/home/HomePage';
 export { WelcomeMsg } from './specific/welcome/WelcomeMsg';
+export { About } from './specific/about/About';

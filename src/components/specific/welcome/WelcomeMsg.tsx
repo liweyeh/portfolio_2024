@@ -2,11 +2,6 @@
 import React, { useRef } from 'react';
 import { useIntersectionObserver } from '@hooks';
 
-// Todo: draw simple monitor in css
-// Todo: add animation of monitor turning on
-// Todo: add typing animation of welcome msg
-// Todo: add scroll UI to indicate scrolling
-
 export const WelcomeMsg = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 	const { isInView } = useIntersectionObserver(elementRef);
