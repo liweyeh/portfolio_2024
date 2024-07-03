@@ -4,7 +4,7 @@ export const CUSTOM_COLORS = {
 	black: '#000000',
 	oxford_blue: '#14213D',
 	orange: '#FCA311',
-	platinum: '#E5E5E5',
+	battleship_gray: '#878787',
 	white: '#FFFFFF',
 };
 
@@ -18,8 +18,9 @@ const config: Config = {
 		extend: {
 			colors: {
 				bg_primary: CUSTOM_COLORS.black,
-				highlight: CUSTOM_COLORS.oxford_blue,
-				txt_primary: CUSTOM_COLORS.platinum,
+				highlight: CUSTOM_COLORS.orange,
+				txt_primary: CUSTOM_COLORS.white,
+				txt_secondary: CUSTOM_COLORS.battleship_gray,
 			},
 			keyframes: {
 				slide_right: {
@@ -42,7 +43,7 @@ const config: Config = {
 				},
 				blink_caret: {
 					'from, to': { borderColor: 'transparent' },
-					'50%': { borderColor: CUSTOM_COLORS.platinum },
+					'50%': { borderColor: CUSTOM_COLORS.white },
 				},
 			},
 			animation: {

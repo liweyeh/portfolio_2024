@@ -4,7 +4,7 @@ import { useIntersectionObserver } from '@hooks';
 
 export const WelcomeMsg = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
-	const { isInView } = useIntersectionObserver(elementRef);
+	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
 
 	return (
 		<div ref={elementRef} className="h-screen flex justify-center items-center overflow-hidden">

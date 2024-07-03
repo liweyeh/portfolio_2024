@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 export const useIntersectionObserver = (
 	elRef: React.MutableRefObject<HTMLDivElement | null>,
+	options?: IntersectionObserverInit,
 ): { isInView: boolean } => {
 	const [isInView, setisInView] = useState(false);
 	useEffect(() => {
@@ -15,9 +16,7 @@ export const useIntersectionObserver = (
 					}
 				});
 			},
-			{
-				threshold: 0.1,
-			},
+			{ ...options },
 		);
 
 		let ref: HTMLDivElement;
