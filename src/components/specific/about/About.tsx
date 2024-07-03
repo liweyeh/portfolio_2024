@@ -24,7 +24,7 @@ export const About = () => {
 					<p
 						ref={elementRef}
 						className={`text-txt_primary text-3xl leading-10  ${isInView ? 'animate-slide_left' : 'opacity-0'}`}
-					>{`I'm a fullstack developer originally from Taiwan and currently based in Sydney. I am passionate about building great interactive experience for the users. In addition, I have great interest in creative programming, UI/UX (HCI) research, VR/AR application development`}</p>
+					>{`I'm a fullstack developer originally from Taiwan and currently based in Sydney. I am passionate about building great interactive experience for the users. In addition, I have great interest in creative programming, UI/UX (HCI) research, and VR/AR application development`}</p>
 				</div>
 			</div>
 		</div>
