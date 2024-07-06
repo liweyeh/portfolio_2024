@@ -1,6 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { useIntersectionObserver } from '@hooks';
+import { Text, TextVariants } from '@components';
 
 export const WelcomeMsg = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
@@ -14,9 +15,10 @@ export const WelcomeMsg = () => {
 						className={`h-[90%] border-solid border-x-2 border-t-2 border-txt_primary rounded-t-2xl flex items-center justify-center ${isInView && 'animate-slide_right'}`}
 					>
 						<div>
-							<p
-								className={`text-txt_primary text-7xl overflow-hidden border-r-2 whitespace-nowrap mx-auto ${isInView && 'animate-typing'}`}
-							>{`Welcome to Liwei\'s portfolio`}</p>
+							<Text
+								variant={TextVariants.h1}
+								style={`overflow-hidden border-r-2 whitespace-nowrap mx-auto ${isInView && 'animate-typing'}`}
+							>{`Welcome to Liwei\'s portfolio`}</Text>
 						</div>
 					</div>
 					<div

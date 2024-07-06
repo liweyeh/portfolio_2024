@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { WelcomeMsg, About, ProgressBar, useProgress } from '@components';
+import { WelcomeMsg, About, Skills, ProgressBar, useProgress } from '@components';
 
 export const HomePage = () => {
 	const { contentRef, scrollProgress } = useProgress();
@@ -9,7 +9,7 @@ export const HomePage = () => {
 		<main className="h-screen bg-bg_primary overflow-y-scroll" ref={contentRef}>
 			<WelcomeMsg />
 			<About />
-			<div className="bg-txt_primary">skill list</div>
+			<Skills />
 			<div className="bg-txt_primary">projects</div>
 			<div className="bg-txt_primary">contact</div>
 			<ProgressBar progress={scrollProgress} />
