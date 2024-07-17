@@ -16,9 +16,10 @@ const TEXT_VARIANTS: { [key in TextVariants]: string } = {
 	[TextVariants.h1]: 'text-7xl',
 	[TextVariants.h2]: 'text-5xl',
 	[TextVariants.h3]: 'text-3xl',
-	[TextVariants.p]: 'text-7xl',
+	[TextVariants.p]: 'text-xl',
 };
 
+// Todo: Update for accessibility
 export const Text = ({ children, variant = TextVariants.p, style }: TextProps) => {
 	return <p className={`text-txt_primary ${TEXT_VARIANTS[variant]} ${style}`}>{children}</p>;
 };
