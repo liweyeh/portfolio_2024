@@ -1,6 +1,9 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 import { Text, TextVariants } from '@components';
-import { IconType } from 'react-icons';
+import { LuLanguages } from 'react-icons/lu';
+import { TbLanguageHiragana } from 'react-icons/tb';
+import { RiEnglishInput } from 'react-icons/ri';
 import {
 	SiReact,
 	SiNextdotjs,
@@ -13,15 +16,20 @@ import {
 } from 'react-icons/si';
 import { BsFiletypeScss } from 'react-icons/bs';
 import { VscVscode } from 'react-icons/vsc';
+import { useIntersectionObserver } from '@hooks';
 
 export const Skills = () => {
+	const elementRef = useRef<HTMLDivElement | null>(null);
+	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
+
 	return (
-		<div className={`h-screen flex justify-center items-center`}>
+		<div ref={elementRef} className={`h-screen flex justify-center items-center`}>
 			<div className="h-5/6 w-5/6 grid grid-cols-5 grid-rows-2 gap-10">
 				<Section
 					title={'Tech Stacks'}
-					styles={'col-start-1 row-span-2 col-span-2'}
-					contentStyle="flex flex-1 flex-wrap"
+					styles={`col-start-1 row-span-2 col-span-2 ${isInView && 'animate-slide_right'}`}
+					contentStyle={`flex flex-1 flex-wrap`}
+					isInView={isInView}
 				>
 					<SectionItem
 						title={'React.js'}
@@ -56,8 +64,9 @@ export const Skills = () => {
 				</Section>
 				<Section
 					title="Tools"
-					styles={'col-start-3 row-span-1 col-span-3'}
+					styles={`col-start-3 row-span-1 col-span-3 ${isInView && 'animate-slide_left'}`}
 					contentStyle={'grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-6'}
+					isInView={isInView}
 				>
 					<SectionItem
 						title={'VSCode'}
@@ -66,7 +75,7 @@ export const Skills = () => {
 					/>
 					<SectionItem
 						title={'Azure Devops'}
-						desc={'3 years of experience'}
+						desc={'4 years of experience'}
 						icon={<SiAzuredevops size={'sm'} />}
 					/>
 					<SectionItem
@@ -82,23 +91,20 @@ export const Skills = () => {
 				</Section>
 				<Section
 					title="Languages"
-					styles={'col-start-3 row-span-1 col-span-3'}
+					styles={`col-start-3 row-span-1 col-span-3 ${isInView && 'animate-slide_left'}`}
 					contentStyle={'grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-6'}
+					isInView={isInView}
 				>
-					<SectionItem
-						title={'Japanese'}
-						desc={'5 years of experience'}
-						icon={<VscVscode size={'sm'} />}
-					/>
-					<SectionItem
-						title={'Mandarin'}
-						desc={'3 years of experience'}
-						icon={<SiAzuredevops size={'sm'} />}
-					/>
+					<SectionItem title={'Mandarin'} desc={'Native'} icon={<LuLanguages size={'sm'} />} />
 					<SectionItem
 						title={'English'}
-						desc={'1 years of experience'}
-						icon={<SiAzurefunctions size={'sm'} />}
+						desc={'Fluent, IELTS: 8.5'}
+						icon={<RiEnglishInput size={'sm'} />}
+					/>
+					<SectionItem
+						title={'Japanese'}
+						desc={'intermediate, JLPT N1'}
+						icon={<TbLanguageHiragana size={'sm'} />}
 					/>
 				</Section>
 			</div>
@@ -111,16 +117,21 @@ const Section = (props: {
 	styles: string;
 	contentStyle: string;
 	children: React.ReactElement[];
+	isInView: boolean;
 }) => {
 	return (
 		<div
 			className={`text-txt_primary border-txt_primary border-2 rounded-xl p-8 flex flex-col ${props.styles}`}
 		>
-			<Text style="pb-8 text-highlight" variant={TextVariants.h2}>
+			<Text style="pb-8 !text-highlight" variant={TextVariants.h2}>
 				{props.title}
 			</Text>
-			<div className={'flex flex-1 items-center justify-center'}>
-				<div className={`h-full w-full justify-center ${props.contentStyle}`}>{props.children}</div>
+			<div className={`flex flex-1 items-center justify-center`}>
+				<div
+					className={`h-full w-full justify-center ${props.contentStyle}  ${props.isInView && 'animate-fade_in'}`}
+				>
+					{props.children}
+				</div>
 			</div>
 		</div>
 	);
@@ -132,7 +143,9 @@ const SectionItem = (props: { icon: React.ReactElement; title: string; desc: str
 			<div className="w-20">{props.icon}</div>
 			<div>
 				<Text variant={TextVariants.h3}>{props.title}</Text>
-				<Text variant={TextVariants.p}>{props.desc}</Text>
+				<Text variant={TextVariants.p} style="text-txt_secondary">
+					{props.desc}
+				</Text>
 			</div>
 		</div>
 	);
