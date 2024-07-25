@@ -2,6 +2,9 @@
 import React from 'react';
 import { WelcomeMsg, About, Skills, ProgressBar, useProgress } from '@components';
 
+// Todo: add a loading page
+// Todo: add responsive
+
 export const HomePage = () => {
 	const { contentRef, scrollProgress } = useProgress();
 
@@ -10,8 +13,8 @@ export const HomePage = () => {
 			<WelcomeMsg />
 			<About />
 			<Skills />
-			<div className="bg-txt_primary">projects</div>
-			<div className="bg-txt_primary">contact</div>
+			{/* <div className="bg-txt_primary">projects</div>
+			<div className="bg-txt_primary">contact</div> */}
 			<ProgressBar progress={scrollProgress} />
 		</main>
 	);
