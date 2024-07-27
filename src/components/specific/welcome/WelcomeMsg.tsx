@@ -8,7 +8,10 @@ export const WelcomeMsg = () => {
 	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
 
 	return (
-		<div ref={elementRef} className="h-screen flex justify-center items-center overflow-hidden">
+		<div
+			ref={elementRef}
+			className={`h-screen flex justify-center items-center overflow-hidden ${!isInView && 'opacity-0'}`}
+		>
 			<div className={`h-[90vh] w-[90vw] flex flex-col items-center justify-center`}>
 				<div className={`h-[85%] w-[100%] flex flex-col`}>
 					<div

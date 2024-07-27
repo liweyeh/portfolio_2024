@@ -1,7 +1,10 @@
 'use client';
 import React, { useRef } from 'react';
-import { Text, TextVariants } from '@components';
+import { Section } from './Section';
+import { SectionItem } from './SectionItem';
 import { LuLanguages } from 'react-icons/lu';
+import { useIntersectionObserver } from '@hooks';
+import { Text, TextVariants } from '@components';
 import { TbLanguageHiragana } from 'react-icons/tb';
 import { RiEnglishInput } from 'react-icons/ri';
 import {
@@ -16,14 +19,19 @@ import {
 } from 'react-icons/si';
 import { BsFiletypeScss } from 'react-icons/bs';
 import { VscVscode } from 'react-icons/vsc';
-import { useIntersectionObserver } from '@hooks';
 
 export const Skills = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
 
 	return (
-		<div ref={elementRef} className={`h-screen flex justify-center items-center`}>
+		<div
+			ref={elementRef}
+			className={`h-screen flex flex-col justify-center items-center mb-48 ${!isInView && 'opacity-0'}`}
+		>
+			<Text variant={TextVariants.h1} style={`w-5/6 mb-10  ${isInView && 'animate-fade_in'}`}>
+				{'Skills'}
+			</Text>
 			<div className="h-5/6 w-5/6 grid grid-cols-5 grid-rows-2 gap-10">
 				<Section
 					title={'Tech Stacks'}
@@ -42,23 +50,23 @@ export const Skills = () => {
 						icon={<BsFiletypeScss size={'sm'} />}
 					/>
 					<SectionItem
+						title={'Express.js'}
+						desc={'4 years of experience'}
+						icon={<SiExpress size={'sm'} />}
+					/>
+					<SectionItem
+						title={'SQL'}
+						desc={'4 years of experience'}
+						icon={<SiMysql size={'sm'} />}
+					/>
+					<SectionItem
 						title={'Next.js'}
 						desc={'3 years of experience'}
 						icon={<SiNextdotjs size={'sm'} />}
 					/>
 					<SectionItem
-						title={'Express.js'}
-						desc={'3 years of experience'}
-						icon={<SiExpress size={'sm'} />}
-					/>
-					<SectionItem
-						title={'SQL'}
-						desc={'3 years of experience'}
-						icon={<SiMysql size={'sm'} />}
-					/>
-					<SectionItem
 						title={'Tailwind'}
-						desc={'1 years of experience'}
+						desc={'1 year of experience'}
 						icon={<SiTailwindcss size={'sm'} />}
 					/>
 				</Section>
@@ -107,45 +115,6 @@ export const Skills = () => {
 						icon={<TbLanguageHiragana size={'sm'} />}
 					/>
 				</Section>
-			</div>
-		</div>
-	);
-};
-
-const Section = (props: {
-	title: string;
-	styles: string;
-	contentStyle: string;
-	children: React.ReactElement[];
-	isInView: boolean;
-}) => {
-	return (
-		<div
-			className={`text-txt_primary border-txt_primary border-2 rounded-xl p-8 flex flex-col ${props.styles}`}
-		>
-			<Text style="pb-8 !text-highlight" variant={TextVariants.h2}>
-				{props.title}
-			</Text>
-			<div className={`flex flex-1 items-center justify-center`}>
-				<div
-					className={`h-full w-full justify-center ${props.contentStyle}  ${props.isInView && 'animate-fade_in'}`}
-				>
-					{props.children}
-				</div>
-			</div>
-		</div>
-	);
-};
-
-const SectionItem = (props: { icon: React.ReactElement; title: string; desc: string }) => {
-	return (
-		<div className="flex gap-8 items-center w-fit">
-			<div className="w-20">{props.icon}</div>
-			<div>
-				<Text variant={TextVariants.h3}>{props.title}</Text>
-				<Text variant={TextVariants.p} style="text-txt_secondary">
-					{props.desc}
-				</Text>
 			</div>
 		</div>
 	);

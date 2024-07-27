@@ -30,7 +30,7 @@ export const useIntersectionObserver = (
 				observer.unobserve(ref);
 			}
 		};
-	}, [elRef]);
+	}, [elRef, options]);
 
 	return { isInView };
 };

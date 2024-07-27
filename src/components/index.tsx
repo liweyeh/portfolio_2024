@@ -7,3 +7,4 @@ export { HomePage } from './specific/home/HomePage';
 export { WelcomeMsg } from './specific/welcome/WelcomeMsg';
 export { About } from './specific/about/About';
 export { Skills } from './specific/skill/Skills';
+export { Projects } from './specific/projects/Projects';

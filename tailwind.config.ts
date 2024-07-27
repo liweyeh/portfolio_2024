@@ -16,6 +16,9 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
+			boxShadow: {
+				'3xl': '0 0 30px 6px',
+			},
 			colors: {
 				bg_primary: CUSTOM_COLORS.black,
 				highlight: CUSTOM_COLORS.orange,
@@ -24,12 +27,12 @@ const config: Config = {
 			},
 			keyframes: {
 				slide_right: {
-					'0%': { transform: 'translateX(-50%)' },
-					'100%': { transform: 'translateX(0%)' },
+					'0%': { transform: 'translateX(-50%)', opacity: '0%' },
+					'100%': { transform: 'translateX(0%)', opacity: '100%' },
 				},
 				slide_left: {
-					'0%': { transform: 'translateX(50%)' },
-					'100%': { transform: 'translateX(0%)' },
+					'0%': { transform: 'translateX(50%)', opacity: '0%' },
+					'100%': { transform: 'translateX(0%)', opacity: '100%' },
 				},
 				fade_in: {
 					'0%': { opacity: '0%' },

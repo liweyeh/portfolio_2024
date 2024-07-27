@@ -4,7 +4,9 @@ export enum TextVariants {
 	h1,
 	h2,
 	h3,
-	p,
+	subtitle,
+	p1,
+	p2,
 }
 interface TextProps extends React.CSSProperties {
 	children: React.ReactNode;
@@ -16,10 +18,12 @@ const TEXT_VARIANTS: { [key in TextVariants]: string } = {
 	[TextVariants.h1]: 'text-7xl',
 	[TextVariants.h2]: 'text-5xl',
 	[TextVariants.h3]: 'text-3xl',
-	[TextVariants.p]: 'text-xl',
+	[TextVariants.subtitle]: 'text-3xl !text-txt_secondary',
+	[TextVariants.p1]: 'text-2xl',
+	[TextVariants.p2]: 'text-xl',
 };
 
 // Todo: Update for accessibility
-export const Text = ({ children, variant = TextVariants.p, style }: TextProps) => {
+export const Text = ({ children, variant = TextVariants.p1, style }: TextProps) => {
 	return <p className={`text-txt_primary ${TEXT_VARIANTS[variant]} ${style}`}>{children}</p>;
 };

@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { WelcomeMsg, About, Skills, ProgressBar, useProgress } from '@components';
+import { WelcomeMsg, About, Skills, Projects, ProgressBar, useProgress } from '@components';
 
 // Todo: add a loading page
 // Todo: add responsive
@@ -13,8 +13,7 @@ export const HomePage = () => {
 			<WelcomeMsg />
 			<About />
 			<Skills />
-			{/* <div className="bg-txt_primary">projects</div>
-			<div className="bg-txt_primary">contact</div> */}
+			<Projects />
 			<ProgressBar progress={scrollProgress} />
 		</main>
 	);
