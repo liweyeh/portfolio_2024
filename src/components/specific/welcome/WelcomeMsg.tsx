@@ -5,7 +5,7 @@ import { Text, TextVariants } from '@components';
 
 export const WelcomeMsg = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
-	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
+	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0 });
 
 	return (
 		<div

@@ -4,6 +4,7 @@ export const CUSTOM_COLORS = {
 	black: '#000000',
 	oxford_blue: '#14213D',
 	orange: '#FCA311',
+	orange_light: '#fdc05b',
 	battleship_gray: '#878787',
 	white: '#FFFFFF',
 };
@@ -22,6 +23,7 @@ const config: Config = {
 			colors: {
 				bg_primary: CUSTOM_COLORS.black,
 				highlight: CUSTOM_COLORS.orange,
+				highlight_light: CUSTOM_COLORS.orange_light,
 				txt_primary: CUSTOM_COLORS.white,
 				txt_secondary: CUSTOM_COLORS.battleship_gray,
 			},

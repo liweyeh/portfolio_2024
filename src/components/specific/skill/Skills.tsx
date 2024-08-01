@@ -26,13 +26,12 @@ export const Skills = () => {
 
 	return (
 		<div
-			ref={elementRef}
 			className={`h-screen flex flex-col justify-center items-center mb-48 ${!isInView && 'opacity-0'}`}
 		>
 			<Text variant={TextVariants.h1} style={`w-5/6 mb-10  ${isInView && 'animate-fade_in'}`}>
 				{'Skills'}
 			</Text>
-			<div className="h-5/6 w-5/6 grid grid-cols-5 grid-rows-2 gap-10">
+			<div ref={elementRef} className="h-5/6 w-5/6 grid grid-cols-5 grid-rows-2 gap-10">
 				<Section
 					title={'Tech Stacks'}
 					styles={`col-start-1 row-span-2 col-span-2 ${isInView && 'animate-slide_right'}`}
