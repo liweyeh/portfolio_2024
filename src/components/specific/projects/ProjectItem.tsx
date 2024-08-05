@@ -10,9 +10,10 @@ interface ProjectItemProps {
 	name: string;
 	description: React.ReactElement;
 	link: string;
+	drawing: React.ReactElement;
 }
 
-export const ProjectItem = ({ type, name, description, link }: ProjectItemProps) => {
+export const ProjectItem = ({ type, name, description, link, drawing }: ProjectItemProps) => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
 	return (
@@ -30,10 +31,10 @@ export const ProjectItem = ({ type, name, description, link }: ProjectItemProps)
 					<Text variant={TextVariants.h2} style={`!text-highlight mb-5`}>
 						{name}
 					</Text>
-					<span className="mb-5">{description}</span>
+					<div className="grow">{description}</div>
 					<ProjectButton link={link} />
 				</div>
-				<div>drawing</div>
+				<div>{drawing}</div>
 			</div>
 		</div>
 	);

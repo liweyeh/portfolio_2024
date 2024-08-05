@@ -21,8 +21,9 @@ export const Projects = () => {
 					key={item.name}
 					type={item.type}
 					name={item.name}
-					description={item.descrition}
+					description={item.description}
 					link={item.link}
+					drawing={item.drawing}
 				/>
 			))}
 		</div>
@@ -33,31 +34,56 @@ const items = [
 	{
 		type: 'Web App',
 		name: 'Water Insights',
-		descrition: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
+		description: (
+			<div className="flex flex-col h-full">
+				<Text variant={TextVariants.p1} style={'mb-4'}>
+					WaterInsights provides easy access to information about New South Wales&apos; water
+					resources and how the state government manages them
+				</Text>
+				<Text variant={TextVariants.p1}>
+					My role in this project is full-stack developer. The responsibility includes interface
+					development, API design & development, ETL operation, and Databse schema design.
+				</Text>
+				<div className="flex items-center grow">
+					<div className="flex flex-col grow gap-2 border-txt_primary border-2 rounded-xl p-5">
+						<Text variant={TextVariants.p1} style={'text-highlight'}>
+							Tech Stack
+						</Text>
+						<Text variant={TextVariants.p1}>
+							React.js, SCSS, Express.js, SQL, Azure Functions, Azure Data Factory
+						</Text>
+					</div>
+				</div>
+			</div>
+		),
 		link: 'https://waterinsights.waternsw.com.au/',
+		drawing: <>drawing</>,
 	},
 	{
 		type: 'Web App',
 		name: 'WaterIQ',
-		descrition: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
+		description: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
 		link: 'https://www.wateriq.water.qld.gov.au/',
+		drawing: <>drawing</>,
 	},
 	{
 		type: 'Design',
 		name: 'Collection of Designs',
-		descrition: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
+		description: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
 		link: 'https://www.figma.com/files/team/924550248414798543/project/21279109/Design?fuid=789297021430117064',
+		drawing: <>drawing</>,
 	},
 	{
 		type: 'Web App + PowerApp',
 		name: 'Dam360',
-		descrition: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
+		description: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
 		link: 'https://www.adasasystems.com/en/solution/dam-safety-management-software.html',
+		drawing: <>drawing</>,
 	},
 	{
 		type: 'Web App',
 		name: 'This Portfolio',
-		descrition: (
+		description: (
 			<Text variant={TextVariants.p1}>
 				{
 					"If you are interested in seeing how I usually code, welcome to take a look at this portfolio's repo."
@@ -65,5 +91,6 @@ const items = [
 			</Text>
 		),
 		link: 'https://github.com/liweyeh/portfolio_2024',
+		drawing: <>drawing</>,
 	},
 ];

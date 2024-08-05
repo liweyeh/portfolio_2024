@@ -110,7 +110,7 @@ export const Skills = () => {
 					/>
 					<SectionItem
 						title={'Japanese'}
-						desc={'intermediate, JLPT N1'}
+						desc={'Intermediate, JLPT N1'}
 						icon={<TbLanguageHiragana size={'sm'} />}
 					/>
 				</Section>
