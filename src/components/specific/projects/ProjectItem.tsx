@@ -16,6 +16,8 @@ interface ProjectItemProps {
 export const ProjectItem = ({ type, name, description, link, drawing }: ProjectItemProps) => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
 	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
+	const [isHovered, setIsHovered] = useState(false);
+
 	return (
 		<div
 			ref={elementRef}
@@ -23,6 +25,8 @@ export const ProjectItem = ({ type, name, description, link, drawing }: ProjectI
 		>
 			<div
 				className={`h-5/6 w-5/6 text-txt_primary border-txt_primary border-2 rounded-xl p-10 grid grid-cols-[37.5%_62.5%] hover:shadow-3xl hover:shadow-highlight transition ease-in-out duration-500`}
+				onMouseEnter={() => setIsHovered(true)}
+				onMouseLeave={() => setIsHovered(false)}
 			>
 				<div className="h-full flex flex-col">
 					<Text variant={TextVariants.subtitle} style={`!text-txt_secondary mb-2`}>
@@ -34,7 +38,7 @@ export const ProjectItem = ({ type, name, description, link, drawing }: ProjectI
 					<div className="grow">{description}</div>
 					<ProjectButton link={link} />
 				</div>
-				<div>{drawing}</div>
+				<div className="h-full">{React.cloneElement(drawing, { isHovered })}</div>
 			</div>
 		</div>
 	);

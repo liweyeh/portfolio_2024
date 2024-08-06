@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import { useIntersectionObserver } from '@hooks';
 import { Text, TextVariants } from '@components';
 import { ProjectItem } from './ProjectItem';
+import { WaterInsightDrawing } from './drawings/WaterInsightDrawing';
 
 export const Projects = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
@@ -42,11 +43,11 @@ const items = [
 				</Text>
 				<Text variant={TextVariants.p1}>
 					My role in this project is full-stack developer. The responsibility includes interface
-					development, API design & development, ETL operation, and Databse schema design.
+					development, API design & development, ETL operation, and databse schema design.
 				</Text>
 				<div className="flex items-center grow">
 					<div className="flex flex-col grow gap-2 border-txt_primary border-2 rounded-xl p-5">
-						<Text variant={TextVariants.p1} style={'text-highlight'}>
+						<Text variant={TextVariants.p1} style={'!text-highlight'}>
 							Tech Stack
 						</Text>
 						<Text variant={TextVariants.p1}>
@@ -57,7 +58,7 @@ const items = [
 			</div>
 		),
 		link: 'https://waterinsights.waternsw.com.au/',
-		drawing: <>drawing</>,
+		drawing: <WaterInsightDrawing />,
 	},
 	{
 		type: 'Web App',
