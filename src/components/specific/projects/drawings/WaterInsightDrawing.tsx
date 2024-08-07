@@ -17,7 +17,7 @@ export const WaterInsightDrawing = ({ isHovered }: { isHovered?: boolean }) => {
 				<div className={`h-full w-5/6 flex flex-col items-center justify-center`}>
 					<div className={`h-[50%] w-[80%] flex flex-col bg-black `}>
 						<div
-							className={`h-[90%] border-solid border-x-2 border-t-2 border-txt_primary rounded-t-2xl flex items-center justify-center`}
+							className={`h-[90%] border-solid border-x-2 border-t-2 border-txt_primary rounded-t-2xl flex items-center justify-center overflow-hidden`}
 						>
 							<div
 								className={`h-full w-full bg-contain bg-[url('/waterinsights.png')] opacity-0 ${isHovered && 'opacity-100'} transition ease-in-out duration-500`}
