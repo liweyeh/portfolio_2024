@@ -35,7 +35,7 @@ export const ProjectItem = ({ type, name, description, link, drawing }: ProjectI
 					<Text variant={TextVariants.h2} style={`!text-highlight mb-5`}>
 						{name}
 					</Text>
-					<div className="grow">{description}</div>
+					<div className="grow flex flex-col h-full gap-4">{description}</div>
 					<ProjectButton link={link} />
 				</div>
 				<div className="h-full">{React.cloneElement(drawing, { isHovered })}</div>

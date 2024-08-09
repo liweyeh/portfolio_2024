@@ -7,6 +7,8 @@ export enum TextVariants {
 	subtitle,
 	p1,
 	p2,
+	p3,
+	little,
 }
 interface TextProps extends React.CSSProperties {
 	children: React.ReactNode;
@@ -21,6 +23,8 @@ const TEXT_VARIANTS: { [key in TextVariants]: string } = {
 	[TextVariants.subtitle]: 'text-3xl !text-txt_secondary',
 	[TextVariants.p1]: 'text-2xl',
 	[TextVariants.p2]: 'text-xl',
+	[TextVariants.p3]: 'text-lg',
+	[TextVariants.little]: 'text-sm',
 };
 
 // Todo: Update for accessibility
