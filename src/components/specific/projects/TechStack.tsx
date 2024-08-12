@@ -7,7 +7,7 @@ export const TechStack = ({ stackContent }: { stackContent: string }) => {
 			<Text variant={TextVariants.p1} style={'!text-highlight'}>
 				Tech Stack
 			</Text>
-			<Text variant={TextVariants.p1}>{stackContent}</Text>
+			<Text variant={TextVariants.p2}>{stackContent}</Text>
 		</div>
 	);
 };

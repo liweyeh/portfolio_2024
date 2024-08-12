@@ -27,7 +27,7 @@ export const WaterInsightDrawing = ({ isHovered }: { isHovered?: boolean }) => {
 						<div
 							className={`h-[10%] border-2 border-txt_primary rounded-b-2xl flex justify-center items-center`}
 						>
-							<div className={`h-[50%] w-10 border-2 border-txt_primary rounded-full  `} />
+							<div className={`h-[50%] w-10 border-2 border-txt_primary rounded-full`} />
 						</div>
 					</div>
 				</div>

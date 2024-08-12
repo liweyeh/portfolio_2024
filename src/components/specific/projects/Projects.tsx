@@ -3,7 +3,8 @@ import React, { useRef } from 'react';
 import { useIntersectionObserver } from '@hooks';
 import { Text, TextVariants } from '@components';
 import { ProjectItem } from './ProjectItem';
-import { WaterInsightDrawing } from './drawings/WaterInsightDrawing';
+import { WaterInsightDrawing, WaterIQ, FigmaDrawing } from './drawings';
+import { FaGithub } from 'react-icons/fa6';
 import { TechStack } from './TechStack';
 import Link from 'next/link';
 
@@ -83,33 +84,20 @@ const items = [
 			</>
 		),
 		link: 'https://www.wateriq.water.qld.gov.au/',
-		drawing: <>drawing</>,
-	},
-	{
-		type: 'Web App (Prototype)',
-		name: 'Dam360',
-		description: (
-			<>
-				<Text variant={TextVariants.p2}>
-					WaterInsights provides easy access to information about New South Wales&apos; water
-					resources and how the state government manages them
-				</Text>
-				<Text variant={TextVariants.p2}>
-					My role in this project is full-stack developer. The responsibility includes interface
-					development, API design & development, ETL operation, and databse schema design.
-				</Text>
-				<TechStack stackContent="React.js, SCSS, Express.js, SQL, Azure Functions, Azure Data Factory" />
-			</>
-		),
-		link: 'https://www.adasasystems.com/en/solution/dam-safety-management-software.html',
-		drawing: <>drawing</>,
+		drawing: <WaterIQ />,
 	},
 	{
 		type: 'Design',
 		name: 'Collection of Designs',
-		description: <Text variant={TextVariants.p1}>{'lorem ipsum'}</Text>,
+		description: (
+			<Text variant={TextVariants.p1}>
+				{
+					'Through out the course of my career, I have sketched up a few quick designs by using Figma.'
+				}
+			</Text>
+		),
 		link: 'https://www.figma.com/files/team/924550248414798543/project/21279109/Design?fuid=789297021430117064',
-		drawing: <>drawing</>,
+		drawing: <FigmaDrawing />,
 	},
 	{
 		type: 'Web App',
@@ -122,6 +110,12 @@ const items = [
 			</Text>
 		),
 		link: 'https://github.com/liweyeh/portfolio_2024',
-		drawing: <>drawing</>,
+		drawing: (
+			<div className="h-full flex justify-center items-center">
+				<div className="w-[60%]">
+					<FaGithub size={'lg'} />
+				</div>
+			</div>
+		),
 	},
 ];

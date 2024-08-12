@@ -24,7 +24,7 @@ export const ProjectItem = ({ type, name, description, link, drawing }: ProjectI
 			className={`h-screen w-screen flex justify-center ${!isInView && 'opacity-0'}`}
 		>
 			<div
-				className={`h-5/6 w-5/6 text-txt_primary border-txt_primary border-2 rounded-xl p-10 grid grid-cols-[37.5%_62.5%] hover:shadow-3xl hover:shadow-highlight transition ease-in-out duration-500`}
+				className={`h-5/6 w-5/6 text-txt_primary border-txt_primary border-2 rounded-xl p-10 pr-0 grid grid-cols-[37.5%_62.5%] hover:shadow-3xl hover:shadow-highlight transition ease-in-out duration-500`}
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
 			>
