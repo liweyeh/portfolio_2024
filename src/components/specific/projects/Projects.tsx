@@ -3,8 +3,7 @@ import React, { useRef } from 'react';
 import { useIntersectionObserver } from '@hooks';
 import { Text, TextVariants } from '@components';
 import { ProjectItem } from './ProjectItem';
-import { WaterInsightDrawing, WaterIQ, FigmaDrawing } from './drawings';
-import { FaGithub } from 'react-icons/fa6';
+import { WaterInsightDrawing, WaterIQ, FigmaDrawing, GithubDrawing } from './drawings';
 import { TechStack } from './TechStack';
 import Link from 'next/link';
 
@@ -110,12 +109,6 @@ const items = [
 			</Text>
 		),
 		link: 'https://github.com/liweyeh/portfolio_2024',
-		drawing: (
-			<div className="h-full flex justify-center items-center">
-				<div className="w-[60%]">
-					<FaGithub size={'lg'} />
-				</div>
-			</div>
-		),
+		drawing: <GithubDrawing />,
 	},
 ];

@@ -11,18 +11,20 @@ export const FigmaDrawing = ({ isHovered }: { isHovered?: boolean }) => {
 
 const Tablet = ({ isHovered }: { isHovered?: boolean }) => {
 	return (
-		<div className="h-[50%] w-[60%] border-2 border-txt_primary rounded-2xl overflow-hidden">
-			<div
-				className={`h-full w-full bg-cover bg-no-repeat bg-[url('/figma.png')] opacity-0 ${isHovered && 'opacity-100'} transition ease-in-out duration-500`}
-			/>
+		<div className="h-[50%] w-[60%] border-2 flex items-center justify-center border-txt_primary rounded-2xl">
+			<div className="h-[95%] w-[95%] border-2 border-txt_primary rounded-2xl overflow-hidden">
+				<div
+					className={`h-full w-full bg-cover bg-no-repeat bg-[url('/figma.png')] opacity-0 ${isHovered && 'opacity-100'} transition ease-in-out duration-500`}
+				/>
+			</div>
 		</div>
 	);
 };
 const Pen = () => {
 	return (
-		<div className="h-[50%] w-[5%] ">
-			<div className="h-[90%] w-full border-2 border-b-0 border-txt_primary rounded-t-2xl" />
-			<div className="h-[10%] w-full border-2 border-txt_primary rounded-b-full" />
+		<div className="h-[50%] w-[2.5%] ">
+			<div className="h-[92.5%] w-full border-2 border-b-0 border-txt_primary rounded-t-2xl" />
+			<div className="h-[7.5%] w-full border-2 border-txt_primary rounded-b-full" />
 		</div>
 	);
 };
