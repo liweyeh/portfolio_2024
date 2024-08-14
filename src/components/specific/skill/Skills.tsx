@@ -41,32 +41,32 @@ export const Skills = () => {
 					<SectionItem
 						title={'React.js'}
 						desc={'5 years of experience'}
-						icon={<SiReact size={'sm'} />}
+						icon={<SiReact className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'SCSS'}
 						desc={'4 years of experience'}
-						icon={<BsFiletypeScss size={'sm'} />}
+						icon={<BsFiletypeScss className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Express.js'}
 						desc={'4 years of experience'}
-						icon={<SiExpress size={'sm'} />}
+						icon={<SiExpress className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'SQL'}
 						desc={'4 years of experience'}
-						icon={<SiMysql size={'sm'} />}
+						icon={<SiMysql className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Next.js'}
 						desc={'3 years of experience'}
-						icon={<SiNextdotjs size={'sm'} />}
+						icon={<SiNextdotjs className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Tailwind'}
 						desc={'1 year of experience'}
-						icon={<SiTailwindcss size={'sm'} />}
+						icon={<SiTailwindcss className="w-full h-full" />}
 					/>
 				</Section>
 				<Section
@@ -78,22 +78,22 @@ export const Skills = () => {
 					<SectionItem
 						title={'VSCode'}
 						desc={'5 years of experience'}
-						icon={<VscVscode size={'sm'} />}
+						icon={<VscVscode className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Azure Devops'}
 						desc={'4 years of experience'}
-						icon={<SiAzuredevops size={'sm'} />}
+						icon={<SiAzuredevops className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Azure Functions'}
 						desc={'1 years of experience'}
-						icon={<SiAzurefunctions size={'sm'} />}
+						icon={<SiAzurefunctions className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Data Factory'}
 						desc={'1 years of experience'}
-						icon={<SiMicrosoftazure size={'sm'} />}
+						icon={<SiMicrosoftazure className="w-full h-full" />}
 					/>
 				</Section>
 				<Section
@@ -102,16 +102,20 @@ export const Skills = () => {
 					contentStyle={'grid grid-cols-2 grid-rows-2 gap-x-2 gap-y-6'}
 					isInView={isInView}
 				>
-					<SectionItem title={'Mandarin'} desc={'Native'} icon={<LuLanguages size={'sm'} />} />
+					<SectionItem
+						title={'Mandarin'}
+						desc={'Native'}
+						icon={<LuLanguages className="w-full h-full" />}
+					/>
 					<SectionItem
 						title={'English'}
 						desc={'Fluent, IELTS: 8.5'}
-						icon={<RiEnglishInput size={'sm'} />}
+						icon={<RiEnglishInput className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Japanese'}
 						desc={'Intermediate, JLPT N1'}
-						icon={<TbLanguageHiragana size={'sm'} />}
+						icon={<TbLanguageHiragana className="w-full h-full" />}
 					/>
 				</Section>
 			</div>

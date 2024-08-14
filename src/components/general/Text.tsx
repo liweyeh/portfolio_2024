@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 export enum TextVariants {
 	h1,
@@ -28,6 +28,13 @@ const TEXT_VARIANTS: { [key in TextVariants]: string } = {
 };
 
 // Todo: Update for accessibility
-export const Text = ({ children, variant = TextVariants.p1, style }: TextProps) => {
-	return <p className={`text-txt_primary ${TEXT_VARIANTS[variant]} ${style}`}>{children}</p>;
-};
+export const Text = forwardRef(function Text(
+	{ children, variant = TextVariants.p1, style }: TextProps,
+	ref?: React.LegacyRef<HTMLParagraphElement>,
+) {
+	return (
+		<p ref={ref} className={`text-txt_primary ${TEXT_VARIANTS[variant]} ${style}`}>
+			{children}
+		</p>
+	);
+});

@@ -9,14 +9,15 @@ import Link from 'next/link';
 
 export const Projects = () => {
 	const elementRef = useRef<HTMLDivElement | null>(null);
-	const { isInView } = useIntersectionObserver(elementRef, { threshold: 0.01 });
+	const { isInView } = useIntersectionObserver(elementRef, { threshold: 1 });
 
 	return (
-		<div
-			ref={elementRef}
-			className={`flex flex-col justify-center items-center ${!isInView && 'opacity-0'}`}
-		>
-			<Text variant={TextVariants.h1} style={`w-5/6 mb-10 ${isInView && 'animate-fade_in'}`}>
+		<div className={`flex flex-col justify-center items-center`}>
+			<Text
+				ref={elementRef}
+				variant={TextVariants.h1}
+				style={`w-5/6 mb-10 ${isInView ? 'opacity-100' : 'opacity-30'} transition ease-in-out duration-500`}
+			>
 				{'Projects'}
 			</Text>
 			{items.map(item => (
