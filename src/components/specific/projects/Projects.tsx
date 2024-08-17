@@ -90,7 +90,7 @@ const items = [
 		type: 'Design',
 		name: 'Collection of Designs',
 		description: (
-			<Text variant={TextVariants.p1}>
+			<Text variant={TextVariants.p2}>
 				{
 					'Through out the course of my career, I have sketched up a few quick designs by using Figma.'
 				}
@@ -103,7 +103,7 @@ const items = [
 		type: 'Web App',
 		name: 'This Portfolio',
 		description: (
-			<Text variant={TextVariants.p1}>
+			<Text variant={TextVariants.p2}>
 				{
 					"If you are interested in seeing how I usually code, welcome to take a look at this portfolio's repo."
 				}
