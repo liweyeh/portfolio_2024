@@ -46,6 +46,10 @@ const config: Config = {
 					'35%': { width: '0%', opacity: '100%' },
 					'100%': { width: '100%' },
 				},
+				focus_in_fwd: {
+					'0%': { transform: 'scale(0.9)', filter: 'blur(12px)', opacity: '0' },
+					'100%': { transform: 'scale(1)', filter: 'blur(0px)', opacity: '1' },
+				},
 				blink_caret: {
 					'from, to': { borderColor: 'transparent' },
 					'50%': { borderColor: CUSTOM_COLORS.white },
@@ -56,6 +60,7 @@ const config: Config = {
 				slide_left: 'slide_left 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both',
 				fade_in: 'fade_in 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both',
 				typing: 'typing 5s steps(35, end), blink_caret 1s 5s infinite',
+				focus_in_fwd: 'focus_in_fwd 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both',
 			},
 		},
 	},

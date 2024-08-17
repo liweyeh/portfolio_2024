@@ -16,7 +16,7 @@ export const Section = (props: {
 			</Text>
 			<div className={`flex flex-1 items-center justify-center`}>
 				<div
-					className={`h-full w-full justify-center ${props.contentStyle}  ${props.isInView && 'animate-fade_in'}`}
+					className={`h-full w-fit grid gap-x-8 gap-y-6 ${props.contentStyle}  ${props.isInView && 'animate-fade_in'}`}
 				>
 					{props.children}
 				</div>

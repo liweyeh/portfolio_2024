@@ -12,11 +12,11 @@ export const Projects = () => {
 	const { isInView } = useIntersectionObserver(elementRef, { threshold: 1 });
 
 	return (
-		<div className={`flex flex-col justify-center items-center`}>
+		<div className={`flex flex-col justify-center items-center gap-10 lg:gap-0`}>
 			<Text
 				ref={elementRef}
 				variant={TextVariants.h1}
-				style={`w-5/6 mb-10 ${isInView ? 'opacity-100' : 'opacity-30'} transition ease-in-out duration-500`}
+				style={`w-5/6 ${isInView ? 'opacity-100' : 'opacity-30'} transition ease-in-out duration-500 lg:mb-10`}
 			>
 				{'Projects'}
 			</Text>

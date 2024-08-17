@@ -2,9 +2,6 @@
 import React from 'react';
 import { WelcomeMsg, About, Skills, Projects, ProgressBar, useProgress } from '@components';
 
-// Todo: add a loading page
-// Todo: add responsive
-
 export const HomePage = () => {
 	const { contentRef, scrollProgress } = useProgress();
 

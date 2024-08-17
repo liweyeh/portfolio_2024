@@ -3,7 +3,9 @@ import React, { useRef, useState, useEffect } from 'react';
 
 export const ProgressBar = ({ progress }: { progress: number }) => {
 	return (
-		<div className={`h-screen w-5 bg-black absolute top-0 right-0 flex justify-end`}>
+		<div
+			className={`h-screen w-5 bg-black absolute top-0 right-0 flex justify-end opacity-0 lg:opacity-100`}
+		>
 			<div className={`w-1 bg-txt_primary`} style={{ height: `${progress}%` }} />
 		</div>
 	);
