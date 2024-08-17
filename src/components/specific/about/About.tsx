@@ -29,11 +29,11 @@ export const About = () => {
 					<Text
 						ref={subRef}
 						variant={TextVariants.subtitle}
-						style={`mb-5  ${isSubInView && isMobile ? 'animate-slide_right' : 'opacity-0'}`}
+						style={`mb-5  ${isSubInView ? 'animate-slide_right' : 'opacity-0'}`}
 					>{`Liwei Yeh`}</Text>
 					<Text
 						variant={TextVariants.h2}
-						style={`!text-highlight mb-5 ${isSubInView ? 'animate-slide_right' : 'opacity-0'}`}
+						style={`!text-highlight mb-5 ${isSubInView && isMobile ? 'animate-slide_right' : isMobile ? 'opacity-0' : 'opacity-100'}`}
 					>{`Fullstack Developer`}</Text>
 					<Text
 						ref={txtRef}
