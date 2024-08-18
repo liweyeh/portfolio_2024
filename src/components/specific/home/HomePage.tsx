@@ -6,7 +6,7 @@ export const HomePage = () => {
 	const { contentRef, scrollProgress } = useProgress();
 
 	return (
-		<main className="h-screen bg-bg_primary overflow-y-scroll" ref={contentRef}>
+		<main className="h-screen bg-bg_primary overflow-y-scroll overflow-x-hidden" ref={contentRef}>
 			<WelcomeMsg />
 			<About />
 			<Skills />
