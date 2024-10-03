@@ -1,7 +1,6 @@
 'use client';
-import React, { useRef } from 'react';
+import React from 'react';
 import { useScreenSize } from '@hooks';
-import { Text, TextVariants } from '@components';
 import { DesktopMsg } from './DesktopMsg';
 import { MobileMsg } from './MobileMsg';
 
