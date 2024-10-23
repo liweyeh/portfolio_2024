@@ -96,7 +96,7 @@ const items = [
 				}
 			</Text>
 		),
-		link: 'https://www.figma.com/files/team/924550248414798543/project/21279109/Design?fuid=789297021430117064',
+		link: 'https://www.figma.com/design/aK4JcnQs99ppBX5z8QYy8r/Power-Apps?t=XtIAmJ4ipolAknYv-1',
 		drawing: <FigmaDrawing />,
 	},
 	{
