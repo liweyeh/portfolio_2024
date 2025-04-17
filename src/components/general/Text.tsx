@@ -17,14 +17,14 @@ interface TextProps extends React.CSSProperties {
 }
 
 const TEXT_VARIANTS: { [key in TextVariants]: string } = {
-	[TextVariants.h1]: 'text-5xl lg:text-7xl',
-	[TextVariants.h2]: 'text-3xl lg:text-5xl',
-	[TextVariants.h3]: 'text-xl lg:text-3xl',
-	[TextVariants.subtitle]: 'text-xl lg:text-3xl !text-txt_secondary',
-	[TextVariants.p1]: 'text-lg lg:text-2xl',
-	[TextVariants.p2]: 'text-md lg:text-xl',
-	[TextVariants.p3]: 'text-sm lg:text-lg',
-	[TextVariants.little]: 'text-xs lg:text-sm',
+	[TextVariants.h1]: 'text-5xl lg:text-4xl',
+	[TextVariants.h2]: 'text-3xl lg:text-xl',
+	[TextVariants.h3]: 'text-xl lg:text-lg',
+	[TextVariants.subtitle]: 'text-xl lg:text-lg !text-txt_secondary',
+	[TextVariants.p1]: 'text-lg lg:text-md',
+	[TextVariants.p2]: 'text-md lg:text-sm',
+	[TextVariants.p3]: 'text-sm lg:text-xs',
+	[TextVariants.little]: 'text-xs lg:text-xxs',
 };
 
 // Todo: Update for accessibility

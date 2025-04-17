@@ -65,12 +65,11 @@ const items = [
 					government.
 				</Text>
 				<Text variant={TextVariants.p2}>
-					My role in this project is a front-end developer. My main responsibility is to develop a
-					customer-facing portal that provides user data management, data visualization, and other
-					water-related operations.
+					My main responsibility is to develop a customer-facing portal that provides user data
+					management, data visualization, and other water-related operations.
 				</Text>
 				<TechStack stackContent="React.js, SCSS, Express.js, SQL, Azure Functions, Azure Data Factory" />
-				<Text variant={TextVariants.little}>
+				<Text variant={TextVariants.little} style="mb-1">
 					*Note: You will not be allowed to log in without authorization. If you wish to have a
 					sneak peek, please check out this{' '}
 					<Link

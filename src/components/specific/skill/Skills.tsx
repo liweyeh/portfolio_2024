@@ -7,16 +7,8 @@ import { useIntersectionObserver } from '@hooks';
 import { Text, TextVariants } from '@components';
 import { TbLanguageHiragana } from 'react-icons/tb';
 import { RiEnglishInput } from 'react-icons/ri';
-import {
-	SiReact,
-	SiNextdotjs,
-	SiExpress,
-	SiMysql,
-	SiTailwindcss,
-	SiAzuredevops,
-	SiAzurefunctions,
-	SiMicrosoftazure,
-} from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiExpress, SiMysql, SiTailwindcss } from 'react-icons/si';
+import { VscAzureDevops, VscAzure } from 'react-icons/vsc';
 import { BsFiletypeScss } from 'react-icons/bs';
 import { VscVscode } from 'react-icons/vsc';
 
@@ -88,17 +80,17 @@ export const Skills = () => {
 					<SectionItem
 						title={'Azure Devops'}
 						desc={'4 years experience'}
-						icon={<SiAzuredevops className="w-full h-full" />}
+						icon={<VscAzureDevops className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Azure Functions'}
 						desc={'1 year experience'}
-						icon={<SiAzurefunctions className="w-full h-full" />}
+						icon={<VscAzure className="w-full h-full" />}
 					/>
 					<SectionItem
 						title={'Data Factory'}
 						desc={'1 year experience'}
-						icon={<SiMicrosoftazure className="w-full h-full" />}
+						icon={<VscAzure className="w-full h-full" />}
 					/>
 				</Section>
 				<Section
