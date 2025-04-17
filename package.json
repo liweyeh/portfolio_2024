@@ -7,7 +7,7 @@
 		"build": "next build",
 		"lint": "next lint",
 		"prettier": "prettier --write . --log-level silent",
-		"format": "yarn prettier && next lint && yarn tsc --noEmit",
+		"format": "pnpm prettier && next lint && pnpm tsc --noEmit",
 		"postinstall": "husky"
 	},
 	"dependencies": {
